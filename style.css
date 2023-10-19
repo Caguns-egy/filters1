@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: linear-gradient(#00eaff, #ff00ea, #e1ff00, #ff0000);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80vw;
+    background: #fff;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.img img{
+    max-width: 45vw;
+    max-height: 60vh;
+}
+
+.upload input{
+    display: none;
+}
+
+.upload label{
+    color: #000;
+    padding: 8px 20px;
+    border: 2px #000 dashed;
+}
+
+.filters ul{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    direction: rtl;
+}
+
+.filters ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    direction: rtl;
+}
+
+.filters ul li label{
+    margin-top: 10px;
+    margin-right: 3px;
+    color: #000;
+}
+
+.filters ul li:last-child{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.filters ul li a, span{
+    color: #fff;
+    padding: 10px 20px;
+    background: #060;
+    cursor: pointer;
+}
+
+@media screen and (max-width:650px){
+    .container{
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+    }
+
+    .img img{
+        max-width: 350px;
+        margin-top: 20px;
+    }
+
+    .upload label{
+        color: #000;
+        padding: 8px 20px;
+        border: 2px #000 dashed;
+        margin-bottom: 10px;
+    }
+}
